@@ -21,12 +21,11 @@ public class QueryExecutor {
              ResultSet resultSet = statement.executeQuery(query)) {
             // Traiter les résultats de la requête
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String password = resultSet.getString("password");
                 int cellAlive = resultSet.getInt("cell_alive");
 
-                return new ProfilUtilisateur(id, name, password, cellAlive);
+                return new ProfilUtilisateur(name, password, cellAlive);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,30 +1,30 @@
 package jdv;
 
-class ProfilUtilisateur {
-    private int id;
+class ProfilUtilisateur{
     private String nomUtilisateur;
     private String password;
     private int cellAlive;
 
-    public ProfilUtilisateur(int id, String nomUtilisateur, String password, int cellAlive) {
-        this.id = id;
-        this.nomUtilisateur = nomUtilisateur;
+    public ProfilUtilisateur(String name, String password, int cellAlive){
+
+        System.out.println("Entrez votre pseudo: ");
+        this.nomUtilisateur = name;
+
+        System.out.println("Entrez votre mdp: ");
         this.password = password;
+
+        System.out.println("Entrez votre règle: ");
         this.cellAlive = cellAlive;
     }
 
 
 
     // Getters et Setters
-    public int getId() {
-        return id;
-    }
-    
-    public String getNomUtilisateur() {
+    public String getNomUtilisateur(){
         return nomUtilisateur;
     }
 
-    public String getPassword() {
+    public String getPassword(){
         return password;
     }
 
